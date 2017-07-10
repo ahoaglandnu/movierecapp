@@ -50,7 +50,7 @@ To get the database started, I manually looked up the 2017 reviews of five of th
 
 Next, we run the *makeadb.py* file in the same directory as the csv files. This will create 'movies.db'
 
-`$ python makeadb.py' 
+`$ python makeadb.py`
 
 I used sqlite for now since this is a small project.
 
@@ -65,6 +65,7 @@ I used sqlite for now since this is a small project.
 `sqlite> select * from movies where movie_id = 0;`
 
 You should see:
+
 `0|0|Underworld: Blood Wars`
 
 `sqlite> .exit`
