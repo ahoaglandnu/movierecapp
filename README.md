@@ -25,9 +25,9 @@ Since this is a prototype, we will limit our search to 2017 movies and reviews
 
 Routes will be:
 
-A table of movies reviewed
-A table of critics
-A table of the the individual critic displaying the movies they reviewed and if they liked it
+A table of movies reviewed.
+A table of critics.
+A table of the individual critic displaying the movies they reviewed and if they liked it.
 
 ## Part 3
 
