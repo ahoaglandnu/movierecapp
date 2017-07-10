@@ -57,9 +57,14 @@ I used sqlite for now since this is a small project.
 #### Launch sqlite3 to ensure the table was created:
 
 `$ sqlite3 movie_db.db`
+
 `sqlite> .tables`
+
 `sqlite> .schema`
+
 `sqlite> select * from movies where movie_id = 0;`
+
 `0|0|Underworld: Blood Wars`
+
 `sqlite> .exit`
 
