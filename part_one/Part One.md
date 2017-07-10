@@ -23,16 +23,18 @@ https://conda.io/docs/using/envs.html
 More on conda vs. pip vs. virtualenv
 https://conda.io/docs/_downloads/conda-pip-virtualenv-translator.html
 
-#### Collecting 2017 Movie Titles
+### Collecting 2017 Movie Titles
 
-Packages used:
+#### Packages used:
 
 *Requests*
 *BeautifulSoup*
 *Pandas*
 
+There is a python script available along with a Jupyter Notebook to see each input.
+
 `$ pip -r requirements.txt`
 
-#### Collecting Movie Reviews
+### Collecting Movie Reviews
 
 *work in progress*
