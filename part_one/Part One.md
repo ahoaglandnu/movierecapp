@@ -25,16 +25,41 @@ https://conda.io/docs/_downloads/conda-pip-virtualenv-translator.html
 
 ### Collecting 2017 Movie Titles
 
-#### Packages used:
+Packages used:
 
 *Requests*
 *BeautifulSoup*
 *Pandas*
 
-There is a python script available along with a Jupyter Notebook to see each input.
-
 `$ pip -r requirements.txt`
+
+#### To collect movie titles:
+
+`$ python movietitles.py`
 
 ### Collecting Movie Reviews
 
-*work in progress*
+
+We need a list of movie critics. Metacritic is a great starting point. Unfortunately, we cannot scrape their website and the API has been down since the CBS acquisition.
+
+#### Manual creation of csv files:
+
+To get the database started, I manually looked up the 2017 reviews of five of the most popular critics according to metacritic. Next, I opened the _movies2017.csv_ file and manually added a "liked" column and added a 1 for a positive review and 0 for a negative review.
+
+#### Make a sqlite database:
+
+Next, we run the *makeadb.py* file in the same directory as the csv files. This will create 'movies.db'
+
+`$ python makeadb.py' 
+
+I used sqlite for now since this is a small project.
+
+#### Launch sqlite3 to ensure the table was created:
+
+`$ sqlite3 movie_db.db`
+`sqlite> .tables`
+`sqlite> .schema`
+`sqlite> select * from movies where movie_id = 0;`
+`0|0|Underworld: Blood Wars`
+`sqlite> .exit`
+
