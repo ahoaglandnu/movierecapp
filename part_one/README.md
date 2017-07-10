@@ -64,6 +64,7 @@ I used sqlite for now since this is a small project.
 
 `sqlite> select * from movies where movie_id = 0;`
 
+You should see:
 `0|0|Underworld: Blood Wars`
 
 `sqlite> .exit`
