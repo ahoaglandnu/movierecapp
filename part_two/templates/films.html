@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>2017 Movies</h1>
+	<hr>
+	<table class="table table-striped">
+		<tr>
+			<th>Movie Title</th>
+			<th>Number of Reviews</th>
+		</tr>
+	{% for row in rows %}
+		<tr>
+			<td><a href="film/{{row[0]}}">{{row[0]}}</a></td>
+			<td>{{row[1]}}</td>
+		</tr>
+
+	{% endfor %}
+
+{% endblock %}
+
+<!-- Total Reviews
+select movies, count(*) from reviews group by movies;
+
+Total Likes
+select movies, count(*) from reviews where liked=1 group by movies;
+
+Total Dislikes
+select movies, count(*) from reviews where liked=0 group by movies; -->

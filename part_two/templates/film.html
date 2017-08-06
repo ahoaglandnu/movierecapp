@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>{{ movies }}</h1>
+	<hr>
+	<div class='table-responsive'>
+		<table class="table table-striped">
+			<tr>
+				<th>Likes</th>
+				<th>Dislikes</th>
+			</tr>
+		{% for like in likes %}
+			<tr>
+				<td>{{ like[0] }}</td>
+			</tr>
+		{% else %}
+			NONE
+		{% endfor %}		
+		{% for dis in dislikes %}
+			<tr>
+				<td>{{ dis[0] }}</td>
+			</tr>
+		{% else %}
+			NONE
+		{% endfor %}
+		</table>
+	</div>
+
+{% endblock %}
