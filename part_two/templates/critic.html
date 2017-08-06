@@ -2,22 +2,20 @@
 
 {% block body %}
 
-	<h1>{{ movies }}</h1>
-	<hr>
-	<h3><strong>Poster Placeholder</strong></h3>
+	<h1>{{ critic }}</h1>
 	<hr>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<h4>{{ numLikes[0] }} Likes</h4>
 				{% for like in likes %}
-				<p><a href="/critic/{{like[0]}}">{{ like[0] }}</a></p>
+				<p><a href="/film/{{like[0]}}">{{ like[0] }}</a></p>
 				{% endfor %}
 			</div>
 			<div class="col-md-6">
 				<h4>{{ numDislikes[0] }} Dislikes</h4>
 				{% for dis in dislikes %}
-				<p><a href="/critic/{{dis[0]}}">{{ dis[0] }}</p>
+				<p><a href="/film/{{dis[0]}}">{{ dis[0] }}</a></p>
 				{% endfor %}
 			</div>
 		</div>

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+	<h1>Critics</h1>
+	<table class="table table-striped">
+		<tr>
+			<th>Critic Name</th>
+			<th>Number of Reviews</th>
+		</tr>
+	{% for row in rows %}
+		<tr>
+			<td><a href="critic/{{row[0]}}">{{row[0]}}</a></td>
+			<td>{{row[1]}}</td>
+		</tr>
+
+	{% endfor %}
+
+{% endblock %}
