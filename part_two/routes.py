@@ -26,7 +26,11 @@ def film(movies):
 	likes = c.fetchall();
 	c.execute("select critic from reviews where liked=0 and movies= ? ;", [movies])
 	dislikes = c.fetchall();
-	return render_template('film.html', likes=likes, dislikes=dislikes, movies=movies)
+	c.execute("select count(*) from reviews where liked=1 and movies = ? ;", [movies])
+	numLikes = c.fetchone();
+	c.execute("select count(*) from reviews where liked=0 and movies= ? ;", [movies])
+	numDislikes = c.fetchone();
+	return render_template('film.html', likes=likes, dislikes=dislikes, movies=movies, numDislikes=numDislikes, numLikes=numLikes)
 
 
 if __name__ == '__main__':
